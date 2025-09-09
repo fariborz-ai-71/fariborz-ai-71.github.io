@@ -6,7 +6,7 @@ const $$ = (s, p=document) => [...p.querySelectorAll(s)];
 async function loadProjects(){
   const grid = $('#projectsGrid');
   try{
-    const res = await fetch('assets/projects.json');
+    const res = await fetch('assets/projects.json?v=7');
     const data = await res.json();
     grid.innerHTML = '';
     data.projects.forEach(p => {
@@ -63,5 +63,5 @@ function bindUI(){
   const savedTheme = localStorage.getItem('theme'); setTheme(savedTheme || 'dark');
   loadProjects().then(()=>applyFilter());
   bindUI();
-  if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js'); }
+  // Service Worker disabled
 })();
