@@ -55,6 +55,63 @@
       ],
       "repo": "#",
       "demo": ""
+    },
+    {
+      "title": "CV Evaluation Suite",
+      "desc": "پکیج ارزیابی مدل‌های بینایی (Confusion Matrix, PR Curve, Aug-Test).",
+      "badges": [
+        "Python",
+        "OpenCV",
+        "Matplotlib"
+      ],
+      "tags": [
+        "cv"
+      ],
+      "repo": "#",
+      "demo": ""
+    },
+    {
+      "title": "Data Cleaning Scripts",
+      "desc": "اسکریپت‌های پاک‌سازی/برچسب‌سازی دیتاست برای پروژه‌های بینایی.",
+      "badges": [
+        "Pandas",
+        "OpenCV",
+        "CLI"
+      ],
+      "tags": [
+        "cv",
+        "mlops"
+      ],
+      "repo": "#",
+      "demo": ""
+    },
+    {
+      "title": "RAG Docs Demo (Local)",
+      "desc": "دموی لوکال RAG با ایندکس FAISS + رابط سبک؛ مناسب لپ‌تاپ.",
+      "badges": [
+        "FAISS",
+        "FastAPI",
+        "CLI"
+      ],
+      "tags": [
+        "rag"
+      ],
+      "repo": "#",
+      "demo": "#"
+    },
+    {
+      "title": "Python Utilities",
+      "desc": "ابزارک‌های کاربردی (log, file ops, timing) برای پروژه‌های روزمره.",
+      "badges": [
+        "Typer",
+        "Rich",
+        "Python"
+      ],
+      "tags": [
+        "teaching"
+      ],
+      "repo": "#",
+      "demo": ""
     }
   ]
 }
