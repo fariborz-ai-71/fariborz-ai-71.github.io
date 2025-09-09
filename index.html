@@ -1,1 +1,138 @@
-<!doctype html><title>Portfolio</title>
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فریبرز اختیاری — AI & Robotics</title>
+  <meta name="description" content="پرتفولیو فریبرز اختیاری | AI & Robotics | Deep Learning, Computer Vision, RAG">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-deco"></div>
+  <header class="site-header wrap" id="top">
+    <div class="brand">
+      <a class="logo" href="#top"><img src="assets/favicon.svg" width="28" height="28" alt=""><span>Fariborz Okhtiari</span></a>
+      <span class="tag">AI & Robotics · Deep Learning · Computer Vision</span>
+    </div>
+    <nav class="nav">
+      <a href="#projects">پروژه‌ها</a>
+      <a href="#skills">مهارت‌ها</a>
+      <a href="#experience">تجربه</a>
+      <a href="#education">تحصیلات</a>
+      <a href="#achievements">افتخارات</a>
+      <a href="#contact">ارتباط</a>
+      <button id="themeToggle" class="btn ghost" title="تم">🌓</button>
+    </nav>
+  </header>
+
+  <section class="hero wrap">
+    <div class="hero-text">
+      <h1>فریبرز اختیاری</h1>
+      <p class="lead">دولوپر <strong>AI & Robotics</strong> با تمرکز بر <strong>Deep Learning</strong>، <strong>بینایی ماشین</strong> و دستیارهای <strong>RAG</strong>.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">مشاهده پروژه‌ها</a>
+        <a class="btn ghost" href="mailto:fariborze7300@gmail.com">ایمیل</a>
+        <a class="btn ghost" href="https://github.com/fariborz-ai-71" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn outline" href="assets/resume.pdf" target="_blank" rel="noopener">رزومه</a>
+      </div>
+      <ul class="kpis">
+        <li><span class="num">3+</span><span class="lbl">پروژه DL</span></li>
+        <li><span class="num">2</span><span class="lbl">RAG Demo</span></li>
+        <li><span class="num">5+</span><span class="lbl">کارگاه پایتون</span></li>
+      </ul>
+      <div class="searchbar">
+        <input id="searchInput" type="search" placeholder="جست‌وجوی پروژه..." aria-label="Search projects">
+      </div>
+      <div class="filters" role="group" aria-label="Project filters">
+        <button class="chip active" data-filter="all">همه</button>
+        <button class="chip" data-filter="cv">CV</button>
+        <button class="chip" data-filter="rag">RAG</button>
+        <button class="chip" data-filter="mlops">MLOps</button>
+        <button class="chip" data-filter="teaching">تدریس</button>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="grid-dots"></div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section id="about" class="card">
+      <h2>درباره من</h2>
+      <p>از ایده تا محصول: جمع‌آوری داده، آموزش مدل، ارزیابی و استقرار سبک (Docker/CLI). علاقه‌مند به ساخت ابزارهای کاربردی با مستندسازی شفاف.</p>
+      <div class="chips"><span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>OpenCV</span><span>RAG</span><span>Linux</span><span>Git</span></div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>پروژه‌های شاخص</h2>
+      <div id="projectsGrid" class="projects" aria-live="polite"></div>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>مهارت‌ها</h2>
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h4>AI/ML</h4>
+          <ul><li>Deep Learning (PyTorch, TF/Keras)</li><li>Computer Vision، پایه‌های NLP</li><li>Training loops, Eval, Logging</li></ul>
+        </div>
+        <div class="skill-col">
+          <h4>داده و ابزار</h4>
+          <ul><li>Python, NumPy, Pandas</li><li>OpenCV, Albumentations</li><li>Git/GitHub, Linux</li></ul>
+        </div>
+        <div class="skill-col">
+          <h4>سیستم/دیپلوی سبک</h4>
+          <ul><li>Streamlit / FastAPI (Demo)</li><li>Docker (سبک)، CLI</li><li>Docs و README حرفه‌ای</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="card timeline">
+      <h2>تجربه و دستاورد</h2>
+      <div class="tline">
+        <div class="titem"><div class="dot"></div><div class="content"><h3>IPM — Computer Vision</h3><p>پروژه‌های پیش‌پردازش/تشخیص، کیفیت دیتاست و ارزیابی مدل.</p><span class="time">۱۴۰۰–اکنون</span></div></div>
+        <div class="titem"><div class="dot"></div><div class="content"><h3>Python Teaching</h3><p>کارگاه‌های پروژه‌محور (داده/ML/DL) و منتورینگ مسیر یادگیری.</p><span class="time">۱۴۰۲–۱۴۰۳</span></div></div>
+        <div class="titem"><div class="dot"></div><div class="content"><h3>مجتمع فنی تهران — دوره‌ها</h3><p>Python, ML/DL, Computer Vision — پروژه‌های کوچک کاربردی.</p><span class="time">—</span></div></div>
+        <div class="titem"><div class="dot"></div><div class="content"><h3>همراه اول — دوره‌های تخصصی</h3><p>شرکت در دوره‌ها/بوت‌کمپ‌ها و تمرین پروژه‌محور.</p><span class="time">—</span></div></div>
+      </div>
+    </section>
+
+    <section id="education" class="card">
+      <h2>تحصیلات</h2>
+      <ul>
+        <li>کارشناسی‌ارشد هوش مصنوعی و رباتیک — در حال تحصیل</li>
+        <li>کارشناسی حفاری چاه‌های نفت و گاز</li>
+        <li>دوره‌ها/گواهی‌ها: IPM (Vision/ML)، مجتمع فنی تهران (Python/ML/DL)، همراه اول (Bootcamps)</li>
+      </ul>
+    </section>
+
+    <section id="achievements" class="card">
+      <h2>افتخارات و گواهی‌ها</h2>
+      <ul>
+        <li>رتبه‌های برتر مسابقات پایتون (حلقه/نشان طلایی)</li>
+        <li>گواهی‌های IPM، مجتمع فنی تهران، همراه اول</li>
+        <li>برگزاری/همکاری در کارگاه‌های پایتون</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card contact">
+      <h2>ارتباط</h2>
+      <p>برای همکاری/پروژه: <a href="mailto:fariborze7300@gmail.com">fariborze7300@gmail.com</a></p>
+      <div class="social"><a href="https://github.com/fariborz-ai-71" target="_blank" rel="noopener">GitHub</a> · <a href="#" target="_blank" rel="noopener">LinkedIn</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><span>© Fariborz Okhtiari</span><a href="#top" class="totop">↑</a></div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
