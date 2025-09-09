@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fariborz Portfolio — Single</title>
+<style>
+:root{
+  --bg:#0a0a0b; --card:#0e0e10; --text:#f5f5f4; --muted:#c7c7c7;
+  --border:#1a1a1c; --accent:#f59e0b; --accent2:#facc15; --link:#ffe08a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:'Vazirmatn',system-ui,Segoe UI,Roboto}
+body{background:
+  radial-gradient(1000px 400px at 110% -20%, rgba(250,204,21,.12), transparent),
+  radial-gradient(900px 360px at -10% -40%, rgba(245,158,11,.10), transparent),
+  var(--bg);
+  color:var(--text); overflow-x:hidden}
+a{color:var(--link); text-decoration:none}
+.wrap{max-width:1150px;margin:0 auto;padding:0 20px}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:14px 0;position:sticky;top:0;background:linear-gradient(180deg, rgba(10,10,11,.75), transparent);backdrop-filter: blur(8px);z-index:10}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{display:flex;gap:8px;align-items:center;color:var(--text);font-weight:800}
+.tag{color:var(--muted);font-size:12px;margin-inline-start:10px}
+.nav{display:flex;gap:14px;align-items:center}
+.btn{padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:#121215;color:#fff3c4;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--text)}
+.btn.outline{background:transparent;border-color:var(--accent2);color:var(--accent2)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:center;padding:42px 0 12px}
+.hero-text h1{margin:0 0 6px;font-size:40px;letter-spacing:-.02em}
+.lead{color:var(--muted);font-size:16px;margin:8px 0 16px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));border-color:transparent;color:#0a0a0b;font-weight:800}
+.kpis{display:flex;gap:16px;padding:0;margin:12px 0;list-style:none}
+.kpis li{background:linear-gradient(180deg,var(--card),#0b0b0d);border:1px solid var(--border);border-radius:12px;padding:10px 14px;text-align:center;box-shadow:0 0 0 1px rgba(250,204,21,.08), 0 12px 24px rgba(0,0,0,.35)}
+.kpis .num{display:block;font-size:22px;font-weight:900;background:linear-gradient(var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.kpis .lbl{font-size:12px;color:var(--muted)}
+.hero-art{position:relative;height:300px}
+.blob{position:absolute;filter:blur(24px);opacity:.9}
+.blob.b1{width:260px;height:260px;background:radial-gradient(circle at 30% 30%, var(--accent2) 0, transparent 60%);right:10%;top:10%}
+.blob.b2{width:240px;height:240px;background:radial-gradient(circle at 60% 60%, var(--accent) 0, transparent 60%);right:30%;top:30%}
+.grid-dots{position:absolute;inset:auto 0 0 auto;width:280px;height:160px;background:radial-gradient(currentColor 1px, transparent 1px);background-size:14px 14px;opacity:.15;border:1px dashed var(--border);border-radius:12px;color:#facc15}
+.card{border:1px solid var(--border); background:linear-gradient(180deg,var(--card),#0a0a0b); border-radius:16px; padding:22px; margin:16px 0; box-shadow:0 0 0 1px rgba(250,204,21,.06), 0 8px 18px rgba(0,0,0,.3)}
+.card h2{margin:0 0 14px; font-weight:800; color:#fff3c4}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips span{border:1px solid var(--border);background:#121215;padding:6px 10px;border-radius:999px;font-size:12px;color:#ffe08a}
+.projects{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.proj{padding:14px;border:1px solid #2a2208;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.05));transition:transform .15s ease, box-shadow .15s ease, border-color .2s}
+.proj:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.35), 0 0 0 1px rgba(250,204,21,.15) inset; border-color:#f59e0b}
+.proj h3{margin:0 0 6px;font-size:18px;color:#ffecb3}
+.proj p{margin:0 0 10px;color:#d6caa3;min-height:44px}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.badges span{font-size:11px;border:1px solid #3a2f0a;padding:4px 8px;border-radius:999px;color:#facc15;background:rgba(250,204,21,.06)}
+.links .link{font-size:13px;margin-inline-end:10px;color:#ffd166}
+.skill-col h4{color:#ffecb3;margin:0 0 6px}
+.timeline .tline{position:relative;margin:6px 0 0;padding-right:14px}
+.timeline .tline::before{content:"";position:absolute;right:7px;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent2),transparent)}
+.titem{position:relative;padding:10px 10px 10px 0;margin-bottom:8px}
+.titem .dot{position:absolute;right:0;top:16px;width:12px;height:12px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 4px rgba(250,204,21,.15)}
+.titem .content{border:1px solid var(--border);border-radius:12px;padding:10px 12px;background:rgba(14,14,16,.85);backdrop-filter: blur(6px)}
+.time{font-size:12px;color:#d1b66d}
+.contact .social{display:flex;gap:10px;margin-top:8px}
+.site-footer{border-top:1px solid var(--border);padding:18px 0;margin-top:20px;color:#c7b37a}
+.site-footer .wrap{display:flex;justify-content:space-between;align-items:center}
+.searchbar{margin-top:10px}
+.searchbar input{width:100%;max-width:420px;background:#121215;border:1px solid var(--border);border-radius:10px;padding:10px 12px;color:var(--text)}
+.filters{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.chip{border:1px solid var(--border);background:#121215;color:#ffe08a;border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer}
+.chip.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#0a0a0b;border-color:transparent}
+.totop{border:1px solid var(--border);padding:6px 10px;border-radius:8px}
+@media (max-width:880px){ .hero{grid-template-columns:1fr;gap:10px} .hero-art{height:220px} }
+</style></head><body>
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فریبرز اختیاری — AI & Robotics</title>
+  <meta name="description" content="پرتفولیو فریبرز اختیاری | AI & Robotics | Deep Learning, Computer Vision, RAG">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-deco"></div>
+  <header class="site-header wrap" id="top">
+    <div class="brand">
+      <a class="logo" href="#top"><img src="assets/favicon.svg" width="28" height="28" alt=""><span>Fariborz Okhtiari</span></a>
+      <span class="tag">AI & Robotics · Deep Learning · Computer Vision</span>
+    </div>
+    <nav class="nav">
+      <a href="#projects">پروژه‌ها</a>
+      <a href="#skills">مهارت‌ها</a>
+      <a href="#experience">تجربه</a>
+      <a href="#education">تحصیلات</a>
+      <a href="#achievements">افتخارات</a>
+      <a href="#contact">ارتباط</a>
+      <button id="themeToggle" class="btn ghost" title="تم">🌓</button>
+    </nav>
+  </header>
+
+  <section class="hero wrap">
+    <div class="hero-text">
+      <h1>فریبرز اختیاری</h1>
+      <p class="lead">دولوپر <strong>AI & Robotics</strong> با تمرکز بر <strong>Deep Learning</strong>، <strong>بینایی ماشین</strong> و دستیارهای <strong>RAG</strong>.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">مشاهده پروژه‌ها</a>
+        <a class="btn ghost" href="mailto:fariborze7300@gmail.com">ایمیل</a>
+        <a class="btn ghost" href="https://github.com/fariborz-ai-71" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn outline" href="assets/resume.pdf" target="_blank" rel="noopener">رزومه</a>
+      </div>
+      <ul class="kpis">
+        <li><span class="num">3+</span><span class="lbl">پروژه DL</span></li>
+        <li><span class="num">2</span><span class="lbl">RAG Demo</span></li>
+        <li><span class="num">5+</span><span class="lbl">کارگاه پایتون</span></li>
+      </ul>
+      <div class="searchbar">
+        <input id="searchInput" type="search" placeholder="جست‌وجوی پروژه..." aria-label="Search projects">
+      </div>
+      <div class="filters" role="group" aria-label="Project filters">
+        <button class="chip active" data-filter="all">همه</button>
+        <button class="chip" data-filter="cv">CV</button>
+        <button class="chip" data-filter="rag">RAG</button>
+        <button class="chip" data-filter="mlops">MLOps</button>
+        <button class="chip" data-filter="teaching">تدریس</button>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="grid-dots"></div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section id="about" class="card">
+      <h2>درباره من</h2>
+      <p>از ایده تا محصول: جمع‌آوری داده، آموزش مدل، ارزیابی و استقرار سبک (Docker/CLI). علاقه‌مند به ساخت ابزارهای کاربردی با مستندسازی شفاف.</p>
+      <div class="chips"><span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>OpenCV</span><span>RAG</span><span>Linux</span><span>Git</span></div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>پروژه‌های شاخص</h2>
+      <div id="projectsGrid" class="projects" aria-live="polite"></div>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>مهارت‌ها</h2>
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h4>AI/ML</h4>
+          <ul><li>Deep Learning (PyTorch, TF/Keras)</li><li>Computer Vision، پایه‌های NLP</li><li>Training loops, Eval, Logging</li></ul>
+        </div>
+        <div class="skill-col">
+          <h4>داده و ابزار</h4>
+          <ul><li>Python, NumPy, Pandas</li><li>OpenCV, Albumentations</li><li>Git/GitHub, Linux</li></ul>
+        </div>
+        <div class="skill-col">
+          <h4>سیستم/دیپلوی سبک</h4>
+          <ul><li>Streamlit / FastAPI (Demo)</li><li>Docker (سبک)، CLI</li><li>Docs و README حرفه‌ای</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="card timeline">
+      <h2>تجربه و دستاورد</h2>
+      <div class="tline">
+        <div class="titem"><div class="dot"></div><div class="content"><h3>IPM — Computer Vision</h3><p>پروژه‌های پیش‌پردازش/تشخیص، کیفیت دیتاست و ارزیابی مدل.</p><span class="time">۱۴۰۰–اکنون</span></div></div>
+        <div class="titem"><div class="dot"></div><div class="content"><h3>تدریس پایتون</h3><p>کارگاه‌های پروژه‌محور (داده/ML/DL) و طراحی سرفصل.</p><span class="time">۱۴۰۲–۱۴۰۳</span></div></div>
+      </div>
+    </section>
+
+    <section id="education" class="card">
+      <h2>تحصیلات</h2>
+      <ul><li>کارشناسی‌ارشد هوش مصنوعی و رباتیک (در حال تحصیل)</li><li>کارشناسی حفاری چاه‌های نفت و گاز</li></ul>
+    </section>
+
+    <section id="achievements" class="card">
+      <h2>افتخارات و گواهی‌ها</h2>
+      <ul><li>نتایج برتر مسابقات پایتون (حلقه طلایی)</li><li>Courses: IPM, ML/DL, Python</li></ul>
+    </section>
+
+    <section id="contact" class="card contact">
+      <h2>ارتباط</h2>
+      <p>برای همکاری/پروژه: <a href="mailto:fariborze7300@gmail.com">fariborze7300@gmail.com</a></p>
+      <div class="social"><a href="https://github.com/fariborz-ai-71" target="_blank" rel="noopener">GitHub</a> · <a href="#" target="_blank" rel="noopener">LinkedIn</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><span>© Fariborz Okhtiari</span><a href="#top" class="totop">↑</a></div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+<script>
+const html = document.documentElement;
+const $ = (s, p=document) => p.querySelector(s);
+const $$ = (s, p=document) => [...p.querySelectorAll(s)];
+
+async function loadProjects(){
+  const grid = $('#projectsGrid');
+  try{
+    const res = await fetch('assets/projects.json');
+    const data = await res.json();
+    grid.innerHTML = '';
+    data.projects.forEach(p => {
+      const el = document.createElement('article');
+      el.className = 'proj';
+      el.dataset.tags = p.tags.join(' ').toLowerCase();
+      el.innerHTML = `
+        <h3>${p.title}</h3>
+        <p>${p.desc}</p>
+        <div class="badges">${p.badges.map(b=>`<span>${b}</span>`).join('')}</div>
+        <div class="links">
+          ${p.repo ? `<a class="link" href="${p.repo}" target="_blank" rel="noopener">Repo</a>` : ''}
+          ${p.demo ? `<a class="link" href="${p.demo}" target="_blank" rel="noopener">Demo</a>` : ''}
+        </div>`;
+      grid.appendChild(el);
+    });
+  }catch(e){
+    grid.innerHTML = '<p class="muted">خطا در بارگذاری پروژه‌ها.</p>';
+  }
+}
+
+function setTheme(mode){
+  if(mode === 'light'){ html.classList.add('light'); }
+  else { html.classList.remove('light'); }
+  localStorage.setItem('theme', mode);
+}
+function toggleTheme(){
+  const now = localStorage.getItem('theme') === 'light' ? 'dark' : 'light';
+  setTheme(now);
+}
+function applyFilter(){
+  const active = $('.chip.active').dataset.filter;
+  const q = $('#searchInput').value.toLowerCase();
+  $$('#projectsGrid .proj').forEach(card => {
+    const tags = card.dataset.tags;
+    const text = card.textContent.toLowerCase();
+    const okTag = active === 'all' || tags.includes(active);
+    const okSearch = !q || text.includes(q);
+    card.style.display = okTag && okSearch ? '' : 'none';
+  });
+}
+
+function bindUI(){
+  $('#themeToggle')?.addEventListener('click', toggleTheme);
+  $$('.chip').forEach(ch => ch.addEventListener('click', e => {
+    $$('.chip').forEach(c => c.classList.remove('active'));
+    e.currentTarget.classList.add('active');
+    applyFilter();
+  }));
+  $('#searchInput').addEventListener('input', applyFilter);
+}
+
+(function init(){
+  const savedTheme = localStorage.getItem('theme'); setTheme(savedTheme || 'dark');
+  loadProjects().then(()=>applyFilter());
+  bindUI();
+  if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js'); }
+})();
+</script>
+</body></html>

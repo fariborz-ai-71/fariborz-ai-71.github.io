@@ -1,0 +1,60 @@
+{
+  "projects": [
+    {
+      "title": "Detector Drone",
+      "desc": "تشخیص اجسام پرنده با DL، پاک‌سازی داده و ارزیابی میدانی.",
+      "badges": [
+        "PyTorch",
+        "OpenCV",
+        "MLOps-lite"
+      ],
+      "tags": [
+        "cv",
+        "mlops"
+      ],
+      "repo": "#",
+      "demo": "#"
+    },
+    {
+      "title": "RAG Assistant",
+      "desc": "دستیار RAG برای اسناد سازمانی (لوکال/ابری) با FAISS و LLM API.",
+      "badges": [
+        "FAISS",
+        "LLM API",
+        "Streamlit"
+      ],
+      "tags": [
+        "rag"
+      ],
+      "repo": "#",
+      "demo": "#"
+    },
+    {
+      "title": "Vision Toolkit",
+      "desc": "جعبه‌ابزار پردازش تصویر و augmentation برای پروژه‌های سبک.",
+      "badges": [
+        "Pandas",
+        "Albumentations",
+        "CLI"
+      ],
+      "tags": [
+        "cv"
+      ],
+      "repo": "#",
+      "demo": ""
+    },
+    {
+      "title": "Python Courses",
+      "desc": "اسلاید/نوت‌های آموزشی پایتون با تمرین عملی داده و ML.",
+      "badges": [
+        "Teaching",
+        "Jupyter"
+      ],
+      "tags": [
+        "teaching"
+      ],
+      "repo": "#",
+      "demo": ""
+    }
+  ]
+}
