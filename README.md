@@ -8,7 +8,7 @@ AI &amp; Robotics student focusing on Deep Learning and Computer Vision. Strong 
 
 ---
 
-## 🐺 About Me
+## 🐺 About Me 
 - 🛰️ I’m currently working on **attras co** & **arman moj co**
 - 🤝 I’m looking to collaborate on **creative AI & tech projects**
 - 🧠 I’m looking for help with **improving my coding workflow** 🤪
