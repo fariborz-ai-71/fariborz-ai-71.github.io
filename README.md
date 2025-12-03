@@ -1,7 +1,7 @@
 # fariborz-ai-71.github.io
 AI &amp; Robotics student focusing on Deep Learning and Computer Vision. Strong in Python, PyTorch, OpenCV, and shipping ideas to demos. Built a lightweight RAG assistant (FAISS + LLM API) and a drone object-detection pipeline.
 
-<h1 align="center">Hi there 👋 I'm Arman</h1>
+<h1 align="center">Hi there 👋 I'm Fariborz</h1>
 
 <p align="center">
   🚀 AI Developer • 🤖 NLP & LLM Engineer • 🧠 VLM Researcher
@@ -37,8 +37,8 @@ AI &amp; Robotics student focusing on Deep Learning and Computer Vision. Strong 
 
 ## 📊 GitHub Stats
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=radical" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=fariborz-ai-71&show_icons=true&theme=radical" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=fariborz-ai-71&layout=compact&theme=radical" />
 </p>
 
 ---
